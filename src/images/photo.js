@@ -1,46 +1,34 @@
-const breakpoints = [3840, 2400, 1080, 640, 384, 256, 128, 96, 64, 48]
+const breakpoints = [4320, 2160, 1080, 640, 384, 256, 128];
+
+const imgurLink = (id) =>
+  `https://i.imgur.com/${id}`;
 
 const unsplashPhotos = [
-  { id: "1.jpg", width: 1080, height: 780 },
-  { id: "2.jpg", width: 1080, height: 1620 },
-  { id: "3.jpg", width: 1080, height: 720 },
-  { id: "4.jpg", width: 1080, height: 721 },
-//   { id: "KG3TyFi0iTU", width: 1080, height: 1620 },
-//   { id: "Jztmx9yqjBw", width: 1080, height: 607 },
-//   { id: "-heLWtuAN3c", width: 1080, height: 608 },
-//   { id: "xOigCUcFdA8", width: 1080, height: 720 },
-//   { id: "1azAjl8FTnU", width: 1080, height: 1549 },
-//   { id: "ALrCdq-ui_Q", width: 1080, height: 720 },
-//   { id: "twukN12EN7c", width: 1080, height: 694 },
-//   { id: "9UjEyzA6pP4", width: 1080, height: 1620 },
-//   { id: "sEXGgun3ZiE", width: 1080, height: 720 },
-//   { id: "S-cdwrx-YuQ", width: 1080, height: 1440 },
-//   { id: "q-motCAvPBM", width: 1080, height: 1620 },
-//   { id: "Xn4L310ztMU", width: 1080, height: 810 },
-//   { id: "ls94iFAQerE", width: 1080, height: 1620 },
-//   { id: "X48pUOPKf7A", width: 1080, height: 160 },
-//   { id: "GbLS6YVXj0U", width: 1080, height: 810 },
-//   { id: "9CRd1J1rEOM", width: 1080, height: 720 },
-//   { id: "xKhtkhc9HbQ", width: 1080, height: 1440 }
-]
+  {
+    id: "EjQhyBG.jpg",
+    width: 1080,
+    height: 1620
+  },
+  
+];
 
-const photos = unsplashPhotos.map(photo => {
-  const width = breakpoints[0]
-  const height = (photo.height / photo.width) * width
-
+const photos = unsplashPhotos.map((photo, index) => {
+  const width = photo.width * 4;
+  const height = photo.height * 4;
   return {
-    src: unsplashPhotos,
+    src: imgurLink(photo.id, width, height),
+    key: `${index}`,
     width,
     height,
-    images: breakpoints.map(breakpoint => {
-      const height = Math.round((photo.height / photo.width) * breakpoint)
+    images: breakpoints.map((breakpoint) => {
+      const breakpointHeight = Math.round((height / width) * breakpoint);
       return {
-        src: unsplashPhotos,
+        src: imgurLink(photo.id, breakpoint, breakpointHeight),
         width: breakpoint,
-        height
-      }
+        height: breakpointHeight
+      };
     })
-  }
-})
+  };
+});
 
 export default photos;
