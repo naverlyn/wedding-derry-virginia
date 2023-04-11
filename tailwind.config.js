@@ -17,8 +17,15 @@ module.exports = {
       },
       fontFamily: {
         'Dancing': ['Dancing Script', 'cursive'],
-      }
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+        'fade-in': 'fadeIn 1s ease-in-out',
+      },
     },
   },
   plugins: [daisyui],
+  daisyui: {
+    darkTheme: "light"
+  }
 }
