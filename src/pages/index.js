@@ -8,7 +8,7 @@ import { PhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css"
 import dynamic from "next/dynamic";
-import images from "../../src/images/photo.js";
+import images from "../../src/images/photo";
 
 //import images
 import avatar from "../images/avatar.png";
@@ -94,7 +94,7 @@ export default function Home() {
                     <p className="text-center pt-5">QS. Ar-Rum ayat 21</p>
                 </div>
             </section>
-            <section className="shadow-lg pb-5">
+            <section className="shadow-lg pb-5" id="mempelai">
                 <h1 className="text-center text-3xl">Kedua Mempelai</h1>
                 <p className="text-center text-m pt-3 pb-3">Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami</p>
                 <div className="container mx-auto content-center">
@@ -126,45 +126,81 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section id="gallery">
+            <section className='flex justify-center animate-fadeIn min-h-full' id='date'>
+                <div className="container content-center">
+                    <div className='hero-content flex-cols lg:flex-row justify-between'>
+                        <Image src={flower1} width={100} height={100} />
+                        <div className='mx-auto'>
+                            <p className="text-center ">Yang akan Digelar pada tanggal:</p>
+                            <div className='grid md:grid'>
+                                <div className='flex flex-col'>
+                                    <p className="text-3xl font-bold pt-5 drop-shadow-md">Akad: Sabtu, 06 Mei 2023 Pukul 08:00</p>
+                                    <p className="text-3xl font-bold pt-5 drop-shadow-md">Resepsi: Sabtu, 06 Mei 2023 pukul 10.00 WIB</p>
+                                    <p className="text-2xl font-bold justify-center pt-10">Lokasi: Lingkungan Pesantren Darul Falah RT.01/05 Kel.Cijati Kec. Majalengka</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className='w-[400px] h-[200px] shadow-xl' id='map'>
+                                <div ref={mapContainer} className="map-container" />
+                            </div>
+                            <div className='pt-5 text-blue-600 text-center'>
+                                <a href="https://goo.gl/maps/w8GQ7efPsdtP3EY89" target="_blank">
+                                    <button className="btn btn-wide">Lihat di Google maps</button>
+                                </a>
+                            </div>
+                        </div>
+                        <Image src={flower2} width={100} height={100} />
+                    </div>
+                    <div class="container mx-auto pt-10">
+                        <div className="flex gap-5 justify-center">
+                            <div>
+                                <span className="countdown font-mono text-4xl">
+                                    <span style={{ "--value": 15 }}></span>
+                                </span>
+                                days
+                            </div>
+                            <div>
+                                <span className="countdown font-mono text-4xl">
+                                    <span style={{ "--value": 10 }}></span>
+                                </span>
+                                hours
+                            </div>
+                            <div>
+                                <span className="countdown font-mono text-4xl">
+                                    <span style={{ "--value": 24 }}></span>
+                                </span>
+                                min
+                            </div>
+                            <div>
+                                <span className="countdown font-mono text-4xl">
+                                    <span style={{ "--value": 44 }}></span>
+                                </span>
+                                sec
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="gallery" className="shadow-md justify-center">
                 <div className='hero-content flex flex-col mx-auto' id='gallery'>
                     <h1 className='text-5xl text-left'>Gallery</h1>
                 </div>
                 <div className="hero-content flex flex-col mx-auto" id="gallery">
                     <PhotoAlbum
-                        layout="grid"
+                        layout="rows"
                         photos={images}
                         targetRowHeight={150}
                         onClick={({ index }) => setIndex(index)}
                     />
                 </div>
             </section>
-            <section className='flex justify-center animate-fadeIn' id='date'>
-                <div className='hero-content flex-col lg:flex-row justify-between w-full'>
-                    <Image src={flower1} width={100} height={100} />
-                    <div className='mx-auto'>
-                        <div className='grid md:grid'>
-                            <div className='flex flex-col'>
-                                <h1 className='text-4xl font-bold pt-5 mb-2 text-white drop-shadow-md'>Minggu</h1>
-                                <p className='text-2xl text-white drop-shadow-md'>18 Maret 2024</p>
-                            </div>
-                        </div>
-                    </div>
+            <section id="footer" className="shadow-md pt-10">
+                <footer className="footer footer-center p-4 bg-base-300 text-base-content">
                     <div>
-                        <div className='w-[400px] h-[200px] shadow-xl' id='map'>
-                            <div ref={mapContainer} className="map-container" />
-                        </div>
-                        <div className='pt-5 text-blue-600 text-center'>
-                            <a href="https://www.google.com" target="_blank">
-                                <button className="btn btn-wide">Lihat di Google maps</button>
-                            </a>
-                        </div>
+                        <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
                     </div>
-                    <Image src={flower2} width={100} height={100} />
-                </div>
-            </section>
-            <section>
-                asdsad
+                </footer>
             </section>
         </>
     );
