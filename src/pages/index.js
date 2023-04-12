@@ -150,7 +150,7 @@ export default function Home() {
                                 <div className="container mx-auto content-center">
                                     <div className="grid grid-rows-2 justify-center">
                                         <div className='w-[400px] h-[200px] shadow-xl' id='map'>
-                                            <div ref={mapContainer} className="map-container" />
+                                            <div className="" />
                                         </div>
                                         <div className='pt-20 text-blue-600 text-center'>
                                             <a href="https://goo.gl/maps/w8GQ7efPsdtP3EY89" target="_blank">
