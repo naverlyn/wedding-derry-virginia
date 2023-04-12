@@ -16,7 +16,6 @@ import derry from "../images/avatar3.png"
 import virginia from "../images/avatar2.png"
 
 export default function Home() {
-    const [step, setStep] = useState(0);
     const [index, setIndex] = useState(-1);
 
     // // Map
@@ -93,9 +92,9 @@ export default function Home() {
                     <div className="flex h-full">
                         <div className="m-auto">
                             <div className="card max-h-[600px] max-w-md pt-5 rounded-xl backdrop-blur-md border-2 border-white lg:max-w-xl" data-aos="fade-right">
-                                <p className="text-center flex px-10 font-Dancing drop-shadow-sm text-xl lg:text-3xl">
+                                <p className="text-center flex px-10 font-Dancing drop-shadow-sm text-2xl lg:text-3xl">
                                     “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”</p>
-                                <p className="text-center pt-5 text-xl font-Dancing pb-3 shadow-lg">QS. Ar-Rum ayat 21</p>
+                                <p className="text-center pt-5 text-xl font-Dancing pb-3">QS. Ar-Rum ayat 21</p>
                             </div>
                         </div>
                     </div>
@@ -148,34 +147,40 @@ export default function Home() {
                                 <p className="text-md font-Dancing justify-center pt-5 pb-10 text-center lg:text-2xl">Lokasi: Lingkungan Pesantren Darul Falah RT.01/05 Kel.Cijati Kec. Majalengka</p>
                             </div>
                             <div className='pt-20 text-blue-600 text-center'>
-                                        <a href="https://goo.gl/maps/w8GQ7efPsdtP3EY89" target="_blank">
-                                            <button className="btn btn-wide font-sans">Lihat di Google maps</button>
-                                        </a>
-                                    </div>
+                                <a href="https://goo.gl/maps/w8GQ7efPsdtP3EY89" target="_blank">
+                                    <button className="btn btn-wide font-sans">Lihat di Google maps</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <section id="gallery">
+                <div className="max-h-screen bg-background2">
+                    <div className=" lg:flex-row" data-aos="zoom-in">
+                        <div>
+                            <h1 className="text-5xl font-Dancing text-center pt-5">Gallery</h1>
+                            <PhotoAlbum
+                                layout="columns"
+                                className="border-2 border-black"
+                                photos={photos}
+                                spacing={4}
+                                padding={20}
+                                targetRowHeight={32}
+                                onClick={({ index }) => setIndex(index)}
+                            />
 
-            <section id="gallery" className="shadow-md justify-center font-Dancing">
-                <div className='hero-content flex flex-col mx-auto' id='gallery' data-aos="swipe-left">
-                    <h1 className='text-5xl text-left'>Gallery</h1>
+                            <Lightbox
+                                open={index >= 0}
+                                index={index}
+                                close={() => setIndex(-1)}
+                                slides={slides}
+                            />
+                        </div>
+                    </div>
                 </div>
-                <PhotoAlbum
-                    layout="columns"
-                    photos={photos}
-                    targetRowHeight={150}
-                    onClick={({ index }) => setIndex(index)}
-                />
-
-                <Lightbox
-                    open={index >= 0}
-                    index={index}
-                    close={() => setIndex(-1)}
-                    slides={slides}
-                />
             </section>
-            <section id="footer" className="shadow-md pt-10">
+            <section id="footer" className="shadow-md">
                 <footer className="footer footer-center p-4 bg-base-300 text-base-content">
                     <div>
                         <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
