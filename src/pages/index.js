@@ -14,7 +14,7 @@ import slides from "@/images/slides";
 import avatar from "../images/avatar.png";
 import derry from "../images/1.jpg"
 import virginia from "../images/virginia.jpeg"
-import bg from "../images/bg.webp"
+import bg from "../images/bg.jpg"
 
 export default function Home() {
     const [step, setStep] = useState(0);
@@ -68,12 +68,12 @@ export default function Home() {
                 <title>Home</title>
             </Head>
             <div className="hero min-h-screen shadow-lg">
-                <div className="hero-overlay bg-opacity-90">
-                    <div className='opacity-70'>
-                        <Image src={bg} layout="fill" objectFit="cover" className="bg-cover bg-center" />
+                <div className="hero-overlay opacity-90">
+                    <div className='opacity-30'>
+                        <div className="bg-scroll bg-background bg-cover bg-center h-screen"></div>
                     </div>
                 </div>
-                <div className="card w-80 rounded-xl backdrop-blur border-2 animate-swipe-right">
+                <div className="card w-80 rounded-xl backdrop-blur-lg border-2 animate-jello">
                     <figure>
                         <Image src={avatar} className="mask mask-squircle scale-75" width={500} height={500} />
                     </figure>
@@ -84,36 +84,49 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <section id="uhhh" className="hero-overlay shadow-lg min-h-screen">
-                <div className="flex h-screen">
-                    <div className="m-auto">
-                        <p className="text-center flex px-10 font-Dancing text-2xl">
-                            “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”</p>
-                        <p className="text-center pt-5 text-xl font-Dancing">QS. Ar-Rum ayat 21</p>
+            <section id="uhhh" className="shadow-lg">
+                <div className="hero min-h-screen">
+                    <div className="hero-overlay opacity-90">
+                        <div className='opacity-100'>
+                            <div className="bg-scroll bg-background2 bg-cover bg-center h-screen"></div>
+                        </div>
+                    </div>
+                    <div className="flex h-screen">
+                        <div className="m-auto">
+                            <div className="card max-w-md pt-5 rounded-xl backdrop-blur border-2">
+                                <p className="text-center flex px-10 font-Dancing text-4xl text-black drop-shadow-sm">
+                                    “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”</p>
+                                <p className="text-center pt-5 text-xl font-Dancing pb-3 text-white shadow-lg">QS. Ar-Rum ayat 21</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section className="shadow-lg pb-5 pt-10" id="mempelai">
-                <h1 className="text-center text-5xl font-Dancing">Kedua Mempelai</h1>
-                <p className="text-center text-m pt-3 pb-3 text-3xl font-Dancing">Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami</p>
-                <div className="container mx-auto content-center">
-                    <div className="grid grid-cols-2 justify-center gap-4">
-                        <div className="m-4 mr-0 my-20 max-w-full rounded-lg bg-blue-100 py-4 px-4 shadow-lg justify-center">
-                            <div className="-mt-16 flex justify-center md:justify-end">
-                                <Image src={derry} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" />
-                            </div>
-                            <div>
-                                <p className="mt-2 text-gray-600 text-3xl font-Dancing">Derry Muliawan, S.T.</p>
-                                <p className="mt-2 text-gray-600 text-2xl font-Dancing">Putra dari : Bapak H. Otong Junaedi (Alm) dan Ibu Hj. Susilawati (Alm).</p>
-                            </div>
-                        </div>
-                        <div className="ml-0 my-20 max-w-full rounded-lg bg-pink-100 py-4 px-4 shadow-lg justify-center">
-                            <div className="-mt-16 flex justify-center md:justify-end ">
-                                <Image src={virginia} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" />
-                            </div>
-                            <div>
-                                <p className="mt-2 text-gray-600 text-3xl font-Dancing">Virginia Sari, S.Pd.</p>
-                                <p className="mt-2 text-gray-600 text-2xl font-Dancing">Putri dari : Bapak H. Mulyadi dan Ibu Hj. Siti Nurhayati.</p>
+            <section className="shadow-lg" id="mempelai">
+                <div className="bg-scroll bg-background2 bg-cover bg-center h-screen">
+                    <h1 className="text-center text-5xl font-Dancing pt-5">Kedua Mempelai</h1>
+                    <p className="text-center text-m pt-3 pb-3 text-3xl font-Dancing">Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami</p>
+                    <div className="flex">
+                        <div className="m-auto">
+                            <div className="grid grid-cols-2 justify-center gap-4">
+                                <div className="m-4 mr-0 my-20 max-w-full rounded-lg bg-blue-100 py-4 px-4 shadow-lg justify-center">
+                                    <div className="-mt-16 flex justify-center md:justify-end">
+                                        <Image src={derry} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" />
+                                    </div>
+                                    <div>
+                                        <p className="mt-2 text-gray-600 text-3xl font-Dancing">Derry Muliawan, S.T.</p>
+                                        <p className="mt-2 text-gray-600 text-2xl font-Sacramento">Putra dari : Bapak H. Otong Junaedi (Alm) dan Ibu Hj. Susilawati (Alm).</p>
+                                    </div>
+                                </div>
+                                <div className="ml-0 my-20 max-w-full rounded-lg bg-pink-100 py-4 px-4 shadow-lg justify-center">
+                                    <div className="-mt-16 flex justify-center md:justify-end ">
+                                        <Image src={virginia} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" />
+                                    </div>
+                                    <div>
+                                        <p className="mt-2 text-gray-600 text-3xl font-Dancing">Virginia Sari, S.Pd.</p>
+                                        <p className="mt-2 text-gray-600 text-2xl font-Dancing">Putri dari : Bapak H. Mulyadi dan Ibu Hj. Siti Nurhayati.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -198,18 +211,18 @@ export default function Home() {
                     <h1 className='text-5xl text-left'>Gallery</h1>
                 </div>
                 <PhotoAlbum
-        layout="rows"
-        photos={photos}
-        targetRowHeight={150}
-        onClick={({ index }) => setIndex(index)}
-      />
+                    layout="rows"
+                    photos={photos}
+                    targetRowHeight={150}
+                    onClick={({ index }) => setIndex(index)}
+                />
 
-      <Lightbox
-        open={index >= 0}
-        index={index}
-        close={() => setIndex(-1)}
-        slides={slides}
-      />
+                <Lightbox
+                    open={index >= 0}
+                    index={index}
+                    close={() => setIndex(-1)}
+                    slides={slides}
+                />
             </section>
             <section id="footer" className="shadow-md pt-10">
                 <footer className="footer footer-center p-4 bg-base-300 text-base-content">
