@@ -106,7 +106,7 @@ export default function Home() {
                 <div className="bg-scroll bg-background2 bg-cover bg-center h-screen">
                     <div className="flex h-full">
                         <div className="m-auto">
-                            <div className="card max-w-3xl pt-5 rounded-xl backdrop-blur border-2 border-white" data-aos="fade-up-left">
+                            <div className="card max-w-3xl pt-5 rounded-xl backdrop-blur border-2 border-white" data-aos="fade-up-right">
                                 <h1 className="text-center text-5xl font-Dancing pt-5">Kedua Mempelai</h1>
                                 <p className="text-center text-m pt-3 pb-3 text-3xl font-Dancing">Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami</p>
                                 <div className="flex min-h-full">
