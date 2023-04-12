@@ -10,9 +10,9 @@ const imgCollection = [
     height: 859
   },
   {
-    id: "gokxVe0.png",
-    width: 682,
-    height: 1031
+    id: "0uJlYgW.jpeg",
+    width: 1131,
+    height: 864
   },
   {
     id: "CpGaKOX.jpeg",
