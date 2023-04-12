@@ -162,7 +162,6 @@ export default function Home() {
                             <h1 className="text-5xl font-Dancing text-center pt-5">Gallery</h1>
                             <PhotoAlbum
                                 layout="columns"
-                                className="border-2 border-black"
                                 photos={photos}
                                 spacing={4}
                                 padding={20}
