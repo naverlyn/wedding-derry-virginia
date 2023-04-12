@@ -12,6 +12,7 @@ module.exports = {
         Allura: ["Allura", "cursive"],
         Sacramento: ["Sacramento", "cursive"],
         Satisfy: ["Satisfy", "cursive"],
+        Pacifico: ["Pacifico", "cursive"],
       },
       backgroundImage: {
         'background': "url('../images/bg.jpg')",
