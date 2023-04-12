@@ -1,4 +1,5 @@
 const daisyui = require("daisyui");
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,14 +10,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        Dancing: ["Dancing Script", "cursive", ...defaultTheme.fontFamily.serif],
+        Allura: ["Allura", "cursive", ...defaultTheme.fontFamily.serif],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'hero':  "url('https://unsplash.com/photos/2a1GNZZaVHk')",
-      },
-      fontFamily: {
-        'Dancing': ['Dancing Script', 'cursive'],
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
