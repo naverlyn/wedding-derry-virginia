@@ -26,7 +26,7 @@ export default function Home() {
                         <div className="bg-scroll bg-background bg-cover bg-center h-screen"></div>
                     </div>
                 </div>
-                <div className="card w-80 rounded-xl backdrop-blur-lg border-2" data-aos="zoom-in" >
+                <div className="card w-80 rounded-xl backdrop-blur-lg border-2" data-aos="zoom-in" data-aos-anchor-placement="center-bottom">
                     <figure>
                         <Image src={avatar} className="mask mask-squircle scale-75" width={500} height={500} alt="avatar" />
                     </figure>
@@ -136,7 +136,7 @@ export default function Home() {
             </section>
             <section id="footer" className="shadow-md">
                 <footer className="footer footer-center p-4 bg-background h-screen bg-center">
-                    <div className="grid grid-rows-2 gap-0 card min-w-xs rounded-xl backdrop-blur-lg m-5">
+                    <div className="grid grid-rows-2 gap-0 card min-w-xs rounded-xl backdrop-blur-lg m-5" data-aos="zoom-out">
                         <div className="">
                             <figure>
                                 <Image src={avatar} className="mask mask-squircle scale-75" width={250} height={250} alt="avatar" />

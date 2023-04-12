@@ -6,10 +6,10 @@ import { useEffect } from 'react'
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
-      once: true,
+      once: false,
       duration: 1000,
       easing: 'ease-in-out',
-      delay: 200,
+      delay: 100,
       mirror: false,
       anchorPlacement: 'top-bottom'
     })
