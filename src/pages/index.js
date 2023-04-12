@@ -2,8 +2,8 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
-import 'mapbox-gl/dist/mapbox-gl.css';
+// import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+// import 'mapbox-gl/dist/mapbox-gl.css';
 import { PhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css"
@@ -20,48 +20,48 @@ export default function Home() {
     const [step, setStep] = useState(0);
     const [index, setIndex] = useState(-1);
 
-    // Map
-    const mapContainer = useRef(null)
-    const mapContainer2 = useRef(null)
-    const map = useRef(null);
-    const map2 = useRef(null);
-    const [lng, setLng] = useState(108.18996767210655);
-    const [lat, setLat] = useState(-6.760812337288243);
-    const [zoom, setZoom] = useState(15);
+    // // Map
+    // const mapContainer = useRef(null)
+    // const mapContainer2 = useRef(null)
+    // const map = useRef(null);
+    // const map2 = useRef(null);
+    // const [lng, setLng] = useState(108.18996767210655);
+    // const [lat, setLat] = useState(-6.760812337288243);
+    // const [zoom, setZoom] = useState(15);
 
-    useEffect(() => {
-        loadMap();
-        // loadMap2();
-        if (!map.current) return;
-        map.current.on('move', () => {
-            setLng(map.current.getCenter().lng.toFixed(4))
-            setLat(map.current.getCenter().lat.toFixed(4))
-            setZoom(map.current.getZoom().toFixed(2))
-        })
-    })
-
-    const loadMap = async () => {
-        mapboxgl.accessToken = "pk.eyJ1IjoiaGF0c3VzaGlyb3l1a2kiLCJhIjoiY2xnMGt4MXNwMHR0NDNqcDlmb3NsdjM3ZSJ9.UEWrPDqMO_uH6ulxOOCkyw";
-        if (map.current) return;
-        map.current = new mapboxgl.Map({
-            container: mapContainer.current,
-            style: 'mapbox://styles/mapbox/streets-v12',
-            center: [lng, lat],
-            zoom: zoom
-        })
-    }
-
-    //   const loadMap2 = async () => {
-    //     mapboxgl.accessToken = "pk.eyJ1IjoiaGF0c3VzaGlyb3l1a2kiLCJhIjoiY2xnMGt4MXNwMHR0NDNqcDlmb3NsdjM3ZSJ9.UEWrPDqMO_uH6ulxOOCkyw";
-    //     if (map2.current) return;
-
-    //     map2.current = new mapboxgl.Map({
-    //       container: mapContainer2.current,
-    //       style: 'mapbox://styles/mapbox/outdoors-v12',
-    //       center: [lng, lat],
-    //       zoom: zoom
+    // useEffect(() => {
+    //     loadMap();
+    //     // loadMap2();
+    //     if (!map.current) return;
+    //     map.current.on('move', () => {
+    //         setLng(map.current.getCenter().lng.toFixed(4))
+    //         setLat(map.current.getCenter().lat.toFixed(4))
+    //         setZoom(map.current.getZoom().toFixed(2))
     //     })
-    //   }
+    // })
+
+    // const loadMap = async () => {
+    //     mapboxgl.accessToken = "pk.eyJ1IjoiaGF0c3VzaGlyb3l1a2kiLCJhIjoiY2xnMGt4MXNwMHR0NDNqcDlmb3NsdjM3ZSJ9.UEWrPDqMO_uH6ulxOOCkyw";
+    //     if (map.current) return;
+    //     map.current = new mapboxgl.Map({
+    //         container: mapContainer.current,
+    //         style: 'mapbox://styles/mapbox/streets-v12',
+    //         center: [lng, lat],
+    //         zoom: zoom
+    //     })
+    // }
+
+    // //   const loadMap2 = async () => {
+    // //     mapboxgl.accessToken = "pk.eyJ1IjoiaGF0c3VzaGlyb3l1a2kiLCJhIjoiY2xnMGt4MXNwMHR0NDNqcDlmb3NsdjM3ZSJ9.UEWrPDqMO_uH6ulxOOCkyw";
+    // //     if (map2.current) return;
+
+    // //     map2.current = new mapboxgl.Map({
+    // //       container: mapContainer2.current,
+    // //       style: 'mapbox://styles/mapbox/outdoors-v12',
+    // //       center: [lng, lat],
+    // //       zoom: zoom
+    // //     })
+    // //   }
     return (
         <>
             <Head>
