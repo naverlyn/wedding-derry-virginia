@@ -10,7 +10,6 @@ export default function App({ Component, pageProps }) {
       duration: 1000,
       easing: 'ease-in-out',
       delay: 200,
-      disable: 'mobile',
       mirror: false,
       anchorPlacement: 'top-bottom'
     })
