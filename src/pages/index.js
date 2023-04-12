@@ -123,7 +123,7 @@ export default function Home() {
                                             </div>
                                             <div className="ml-0 my-20 max-w-full rounded-lg bg-pink-100 py-4 px-4 shadow-lg justify-center">
                                                 <div className="-mt-16 flex justify-center md:justify-end ">
-                                                    <Image src={virginia} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" alt="virginia_photo" />
+                                                    <Image src={virginia} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" alt="virginia_photos" />
                                                 </div>
                                                 <div>
                                                     <p className="mt-2 text-gray-600 text-3xl font-Dancing font-bold">Virginia Sari, S.Pd.</p>
