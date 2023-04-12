@@ -1,5 +1,4 @@
 const daisyui = require("daisyui");
-const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,8 +10,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Dancing: ["Dancing Script", "cursive", ...defaultTheme.fontFamily.serif],
-        Allura: ["Allura", "cursive", ...defaultTheme.fontFamily.serif],
+        Dancing: ["Dancing Script", "cursive"],
+        Allura: ["Allura", "cursive"],
+        Sacramento: ["Sacramento", "cursive"],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
