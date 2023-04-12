@@ -13,6 +13,7 @@ module.exports = {
         Dancing: ["Dancing Script", "cursive"],
         Allura: ["Allura", "cursive"],
         Sacramento: ["Sacramento", "cursive"],
+        Satisfy: ["Satisfy", "cursive"],
       },
       backgroundImage: {
         'background': "url('../images/bg.jpg')",
@@ -61,16 +62,25 @@ module.exports = {
             transform: 'skewX(-0.1953125deg) skewY(-0.1953125deg)',
           },
         },
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        swipeLeft: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        }
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         tada: 'tada 10s ease-in-out',
         jello: 'jello 1s',
+        fadeIn: 'fadeIn 1s ease-in-out, swipeLeft 1s ease-in-out forwards',
       },
     },
   },
   plugins: [daisyui],
   daisyui: {
     darkTheme: "light"
-  }
+  },
 }
