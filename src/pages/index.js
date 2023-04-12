@@ -73,7 +73,7 @@ export default function Home() {
                         <div className="bg-scroll bg-background bg-cover bg-center h-screen"></div>
                     </div>
                 </div>
-                <div className="card w-80 rounded-xl backdrop-blur-lg border-2" data-aos="fade-left" >
+                <div className="card w-80 rounded-xl backdrop-blur-lg border-2" data-aos="zoom-in" >
                     <figure>
                         <Image src={avatar} className="mask mask-squircle scale-75" width={500} height={500} />
                     </figure>
@@ -144,8 +144,8 @@ export default function Home() {
                         <div className="m-auto">
                             <div className="card max-w-3xl pt-5 rounded-xl backdrop-blur border-2 border-white" data-aos="zoom-in">
                                 <h1 className="text-center text-3xl">Yang akan digelar pada Tanggal:</h1>
-                                <p className="text-3xl font-bold pt-5 drop-shadow-md text-center">Akad: Sabtu, 06 Mei 2023 Pukul 08:00</p>
-                                <p className="text-3xl font-bold pt-5 drop-shadow-md text-center">Resepsi: Sabtu, 06 Mei 2023 pukul 10.00 WIB</p>
+                                <p className="text-xl font-bold pt-5 drop-shadow-md text-center">Akad: Sabtu, 06 Mei 2023 Pukul 08:00</p>
+                                <p className="text-xl font-bold pt-5 drop-shadow-md text-center">Resepsi: Sabtu, 06 Mei 2023 pukul 10.00 WIB</p>
                                 <p className="text-2xl font-bold justify-center pt-10 pb-10 text-center">Lokasi: Lingkungan Pesantren Darul Falah RT.01/05 Kel.Cijati Kec. Majalengka</p>
                                 <div className="container mx-auto content-center">
                                     <div className="grid grid-rows-2 justify-center">
@@ -167,7 +167,7 @@ export default function Home() {
             </section>
 
             <section id="gallery" className="shadow-md justify-center font-Dancing">
-                <div className='hero-content flex flex-col mx-auto' id='gallery'>
+                <div className='hero-content flex flex-col mx-auto' id='gallery' data-aos="swipe-left">
                     <h1 className='text-5xl text-left'>Gallery</h1>
                 </div>
                 <PhotoAlbum
