@@ -101,7 +101,7 @@ export default function Home() {
                                 <p className="text-md font-Dancing text-center lg:text-2xl">Resepsi: Sabtu, 06 Mei 2023 pukul 10.00 WIB</p>
                                 <p className="text-md font-Dancing justify-center pt-5 pb-10 text-center lg:text-2xl">Lokasi: Lingkungan Pesantren Darul Falah RT.01/05 Kel.Cijati Kec. Majalengka</p>
                             </div>
-                            <div className='pt-20 text-blue-600 text-center'>
+                            <div className='pt-20 text-blue-600 text-center' data-aos="fade-left">
                                 <a href="https://goo.gl/maps/w8GQ7efPsdtP3EY89" target="_blank">
                                     <button className="btn btn-wide font-sans">Lihat di Google maps</button>
                                 </a>
