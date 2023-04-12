@@ -2,8 +2,6 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-// import mapboxgl from '!mapbox-gl';
-// import 'mapbox-gl/dist/mapbox-gl.css';
 import { PhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css"
@@ -17,53 +15,10 @@ import virginia from "../images/avatar2.png"
 
 export default function Home() {
     const [index, setIndex] = useState(-1);
-
-    // // Map
-    // const mapContainer = useRef(null)
-    // const mapContainer2 = useRef(null)
-    // const map = useRef(null);
-    // const map2 = useRef(null);
-    // const [lng, setLng] = useState(108.18996767210655);
-    // const [lat, setLat] = useState(-6.760812337288243);
-    // const [zoom, setZoom] = useState(15);
-
-    // useEffect(() => {
-    //     loadMap();
-    //     // loadMap2();
-    //     if (!map.current) return;
-    //     map.current.on('move', () => {
-    //         setLng(map.current.getCenter().lng.toFixed(4))
-    //         setLat(map.current.getCenter().lat.toFixed(4))
-    //         setZoom(map.current.getZoom().toFixed(2))
-    //     })
-    // })
-
-    // const loadMap = async () => {
-    //     mapboxgl.accessToken = "pk.eyJ1IjoiaGF0c3VzaGlyb3l1a2kiLCJhIjoiY2xnMGt4MXNwMHR0NDNqcDlmb3NsdjM3ZSJ9.UEWrPDqMO_uH6ulxOOCkyw";
-    //     if (map.current) return;
-    //     map.current = new mapboxgl.Map({
-    //         container: mapContainer.current,
-    //         style: 'mapbox://styles/mapbox/streets-v12',
-    //         center: [lng, lat],
-    //         zoom: zoom
-    //     })
-    // }
-
-    // //   const loadMap2 = async () => {
-    // //     mapboxgl.accessToken = "pk.eyJ1IjoiaGF0c3VzaGlyb3l1a2kiLCJhIjoiY2xnMGt4MXNwMHR0NDNqcDlmb3NsdjM3ZSJ9.UEWrPDqMO_uH6ulxOOCkyw";
-    // //     if (map2.current) return;
-
-    // //     map2.current = new mapboxgl.Map({
-    // //       container: mapContainer2.current,
-    // //       style: 'mapbox://styles/mapbox/outdoors-v12',
-    // //       center: [lng, lat],
-    // //       zoom: zoom
-    // //     })
-    // //   }
     return (
         <>
             <Head>
-                <title>Home</title>
+                <title>Derry & Virginia | Home</title>
             </Head>
             <div className="hero min-h-screen shadow-lg">
                 <div className="hero-overlay opacity-90">
@@ -180,9 +135,14 @@ export default function Home() {
                 </div>
             </section>
             <section id="footer" className="shadow-md">
-                <footer className="footer footer-center p-4 bg-base-300 text-base-content">
-                    <div>
-                        <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+                <footer className="footer footer-center p-4 bg-background h-screen bg-center">
+                    <div className="grid grid-rows-2 gap-0 card min-w-xs rounded-xl backdrop-blur-lg m-5">
+                        <div className="">
+                            <figure>
+                                <Image src={avatar} className="mask mask-squircle scale-75" width={250} height={250} alt="avatar" />
+                            </figure>
+                        </div>
+                        <div className="text-center text-5xl font-Dancing">Derry & Virginia</div>
                     </div>
                 </footer>
             </section>
