@@ -73,6 +73,7 @@ export default function Home() {
                                                 <div>
                                                     <p className="mt-2 text-gray-600 text-md text-center font-Pacifico">Derry Muliawan, S.T.</p>
                                                     <p className="mt-2 text-gray-600 text-xs font-Satisfy text-center pt-3">Putra dari : Bapak H. Otong Junaedi (Alm) dan Ibu Hj. Susilawati (Alm).</p>
+                                                    <p className="mt-2 text-gray-600 text-xs font-Satisfy text-center pt-3">(TB 80 Majalengka)</p>
                                                 </div>
                                             </div>
                                             <div className="m-1 my-20 max-w-full rounded-lg bg-pink-100 py-4 px-4 shadow-lg justify-center">
@@ -80,8 +81,8 @@ export default function Home() {
                                                     <Image src={virginia} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" alt="virginia_photos" />
                                                 </div>
                                                 <div>
-                                                    <p className="mt-2 text-gray-600 text-md text-center font-Pacifico">Virginia Sari, S.Pd.</p>
-                                                    <p className="mt-2 text-gray-600 text-xs font-Satisfy text-center pt-3">Putri dari : Bapak H. Mulyadi dan Ibu Hj. Siti Nurhayati.</p>
+                                                    <p className="mt-2 text-gray-600 text-[15px] text-center font-Pacifico">Virginia Aprilleliana, S.Pd</p>
+                                                    <p className="mt-2 text-gray-600 text-xs font-Satisfy text-center pt-3">Putri dari : Bapak Wawan Rahmawan Muhdi dan ibu Alit laelani</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -96,16 +97,18 @@ export default function Home() {
                 <div className="bg-scroll bg-background2 bg-cover bg-center h-screen">
                     <div className="flex h-full">
                         <div className="m-auto">
+                            <div className="grid grid-rows-2">
                             <div className="card max-h-[600px] max-w-xs pt-5 rounded-xl backdrop-blur-xs border-white lg:max-w-xl" data-aos="fade-right">
                                 <h1 className="font-Pacifico text-center text-2xl lg:text-3xl">yang akan digelar pada tanggal:</h1>
                                 <p className="text-md font-Dancing pt-3 text-center lg:text-2xl">Akad: Sabtu, 06 Mei 2023 Pukul 08:00</p>
                                 <p className="text-md font-Dancing text-center lg:text-2xl">Resepsi: Sabtu, 06 Mei 2023 pukul 10.00 WIB</p>
                                 <p className="text-md font-Dancing justify-center pt-5 pb-10 text-center lg:text-2xl">Lokasi: Lingkungan Pesantren Darul Falah RT.01/05 Kel.Cijati Kec. Majalengka</p>
                             </div>
-                            <div className='pt-20 text-blue-600 text-center' data-aos="fade-left">
-                                <a href="https://goo.gl/maps/w8GQ7efPsdtP3EY89" target="_blank">
+                            <div className=' text-blue-600 text-center' data-aos="fade-left">
+                                <a href="https://maps.app.goo.gl/HBoBv1wznAaH4M3a6" target="_blank">
                                     <button className="btn btn-wide font-sans">Lihat di Google maps</button>
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -119,7 +122,7 @@ export default function Home() {
                             <div className="pt-10">
                                 <div className="content-center">
                                         <PhotoAlbum
-                                            layout="columns"
+                                            layout="masonry"
                                             photos={photos}
                                             spacing={2}
                                             padding={10}
