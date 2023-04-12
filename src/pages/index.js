@@ -13,6 +13,7 @@ import avatar from "../images/avatar.png";
 import derry from "../images/avatar3.png"
 import virginia from "../images/avatar2.png"
 
+
 export default function Home() {
     const [index, setIndex] = useState(-1);
     return (
@@ -111,38 +112,42 @@ export default function Home() {
                 </div>
             </section>
             <section id="gallery">
-                <div className="max-h-screen bg-background2">
+                <div className="min-h-screen bg-background2">
                     <div className=" lg:flex-row" data-aos="zoom-in">
                         <div>
                             <h1 className="text-5xl font-Dancing text-center pt-5">Gallery</h1>
-                            <PhotoAlbum
-                                layout="columns"
-                                photos={photos}
-                                spacing={4}
-                                padding={20}
-                                targetRowHeight={32}
-                                onClick={({ index }) => setIndex(index)}
-                            />
-
-                            <Lightbox
-                                open={index >= 0}
-                                index={index}
-                                close={() => setIndex(-1)}
-                                slides={slides}
-                            />
+                            <div className="pt-10">
+                                <div className="content-center">
+                                        <PhotoAlbum
+                                            layout="columns"
+                                            photos={photos}
+                                            spacing={2}
+                                            padding={10}
+                                            targetRowHeight={32}
+                                            onClick={({ index }) => setIndex(index)}
+                                        />
+                                    <Lightbox
+                                        open={index >= 0}
+                                        index={index}
+                                        close={() => setIndex(-1)}
+                                        slides={slides}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="footer" className="shadow-md">
                 <footer className="footer footer-center p-4 bg-background h-screen bg-center">
-                    <div className="grid grid-rows-2 gap-0 card min-w-xs rounded-xl backdrop-blur-lg m-5" data-aos="zoom-out">
-                        <div className="">
+                    <div className="flex grid-rows-3 gap-0 card min-w-xs rounded-xl backdrop-blur-lg m-5" data-aos="zoom-out">
+                        <div className="p-0 min-h-fit">
                             <figure>
                                 <Image src={avatar} className="mask mask-squircle scale-75" width={250} height={250} alt="avatar" />
                             </figure>
                         </div>
                         <div className="text-center text-5xl font-Dancing">Derry & Virginia</div>
+                        <div className="text-center text-3xl pt-5 font-Dancing">06 Mei 2023</div>
                     </div>
                 </footer>
             </section>

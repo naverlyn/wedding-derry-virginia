@@ -7,9 +7,9 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
       once: false,
-      duration: 1000,
+      duration: 500,
       easing: 'ease-in-out',
-      delay: 100,
+      delay: 200,
       mirror: false,
       anchorPlacement: 'top-bottom'
     })
