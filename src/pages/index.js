@@ -93,7 +93,7 @@ export default function Home() {
                     <div className="flex h-full">
                         <div className="m-auto">
                             <div className="card max-h-[600px] max-w-xs pt-5 rounded-xl backdrop-blur-md border-2 border-white lg:max-w-xl" data-aos="fade-right">
-                                <p className="text-center flex px-10 font-Dancing drop-shadow-sm text-md lg:text-3xl">
+                                <p className="text-center flex px-10 font-Dancing drop-shadow-sm text-xl lg:text-3xl">
                                     “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”</p>
                                 <p className="text-center pt-5 text-xl font-Dancing pb-3 shadow-lg">QS. Ar-Rum ayat 21</p>
                             </div>
