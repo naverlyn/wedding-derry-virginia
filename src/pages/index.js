@@ -2,7 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-// import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+// import mapboxgl from '!mapbox-gl';
 // import 'mapbox-gl/dist/mapbox-gl.css';
 import { PhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
@@ -75,7 +75,7 @@ export default function Home() {
                 </div>
                 <div className="card w-80 rounded-xl backdrop-blur-lg border-2" data-aos="zoom-in" >
                     <figure>
-                        <Image src={avatar} className="mask mask-squircle scale-75" width={500} height={500} />
+                        <Image src={avatar} className="mask mask-squircle scale-75" width={500} height={500} alt="avatar" />
                     </figure>
                     <h1 className="text-center text-5xl font-Dancing">Derry & Virginia</h1>
                     <div className="card-body">
@@ -114,7 +114,7 @@ export default function Home() {
                                         <div className="grid grid-cols-2 justify-center gap-2">
                                             <div className="m-4 mr-0 my-20 max-w-full rounded-lg bg-blue-100 py-4 px-4 shadow-lg justify-center">
                                                 <div className="-mt-16 flex justify-center md:justify-end">
-                                                    <Image src={derry} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" />
+                                                    <Image src={derry} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" alt="derry_photo"/>
                                                 </div>
                                                 <div>
                                                     <p className="mt-2 text-gray-600 text-3xl font-Dancing font-bold">Derry Muliawan, S.T.</p>
@@ -123,7 +123,7 @@ export default function Home() {
                                             </div>
                                             <div className="ml-0 my-20 max-w-full rounded-lg bg-pink-100 py-4 px-4 shadow-lg justify-center">
                                                 <div className="-mt-16 flex justify-center md:justify-end ">
-                                                    <Image src={virginia} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" />
+                                                    <Image src={virginia} width={500} height={500} className="h-32 w-32 rounded-full border-2 border-indigo-500 object-cover" alt="virginia_photo" />
                                                 </div>
                                                 <div>
                                                     <p className="mt-2 text-gray-600 text-3xl font-Dancing font-bold">Virginia Sari, S.Pd.</p>
